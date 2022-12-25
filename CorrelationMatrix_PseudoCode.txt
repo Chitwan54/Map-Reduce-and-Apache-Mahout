@@ -1,0 +1,29 @@
+# 1. pearson_correlation: Takes in 2 variables and returns the Pearson Correlation Coefficient for the 2 variables.
+BEGIN
+    input variable 1
+    input variable 2
+    compute the Pearson Correlation Coefficient
+    return the Pearson Correlation Coefficient
+END
+
+# 2. Mapper Function: Takes in a line from data and yields month, relative humidity, wind speed and dry bulb temperature.
+BEGIN
+    input line from data
+    extract month
+    extract relative humidity
+    extract wind speed
+    extract dry bulb temperature
+    yield date, relative humidity, wind speed and dry bulb temperature.
+END
+
+# 3. Reducer Function: Takes in the month and the weather data and returns the correlation matrix of the weather data for the corresponding month.
+BEGIN
+    input month
+    input weather data
+    initialise a 3X3 correlation matrix with all values 0
+    for all variables in weather data:
+        for all variables in weather data:
+            compute pearson correlation coefficient
+            update the current position of the correlation matrix with the coefficient
+    yield month, correlation matrix
+END
