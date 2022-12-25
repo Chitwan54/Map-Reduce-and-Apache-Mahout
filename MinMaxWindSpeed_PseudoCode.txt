@@ -1,0 +1,18 @@
+# 1. Mapper Function: Takes in a line from data and yields date and corresponding wind speed
+BEGIN
+    input line from data
+    extract date
+    extract wind speed
+    yield date and wind speed
+END
+
+# 2. Reducer Function: Takes in the date and wind speed and returns the difference of maximum and minimum wind speed for that date.
+BEGIN
+    input date and wind speed
+    find max wind speed
+    find min wind speed
+    compute difference b/w max and min wind speed
+    yield date and difference
+END
+
+
