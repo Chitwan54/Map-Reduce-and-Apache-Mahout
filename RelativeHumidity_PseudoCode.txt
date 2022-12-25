@@ -1,0 +1,15 @@
+# 1. Mapper Function: Takes in a line from data and yields date and corresponding relative humidity.
+BEGIN
+    input line from data
+    extract date
+    extract relative humidity
+    yield date and wind relative humidity
+END
+
+# 2. Reducer Function: Takes in the date and relative humidity and returns the min relative humidity for the corresponding date.
+BEGIN
+    input date
+    input list of relative humidity
+    compute min of relative humidity
+    yield date and min of relative humidity
+END
