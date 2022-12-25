@@ -1,0 +1,16 @@
+# 1. Mapper Function: Takes in a line from data and yields date and corresponding dew point temperatures.
+BEGIN
+    input line from data
+    extract date
+    extract dew point temperature
+    yield date and wind dew point temperature
+END
+
+# 2. Reducer Function: Takes in the date and dew point temperature and returns the mean and variance of the dew point temperatures for the corresponding date.
+BEGIN
+    input date
+    input list of dew point temperatures
+    compute mean of dew point temperatures
+    compute variance of dew point temperatures
+    yield date and mean and variance of dew point temperatures
+END
